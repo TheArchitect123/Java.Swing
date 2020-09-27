@@ -1,4 +1,4 @@
-package view_models;
+package com.news_feed.client.view_models;
 
 public class DashboardPageViewModel {
 

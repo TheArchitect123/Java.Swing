@@ -1,3 +1,4 @@
+package com.news_feed.client;
 
 import javax.swing.JFrame;
 public class ApplicationMngr extends JFrame{
