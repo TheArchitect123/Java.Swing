@@ -1,19 +1,26 @@
 package com.dg.client;
 
+import javax.swing.JFrame;
+
 import com.dg.client.components.frames.ApplicationShell;
 
 public class Main {
 	
-	private ApplicationShell _mainShell;
+	private static ApplicationShell mainShell;
 	
-	private void initializeApplicationShell() {
-		_mainShell = new ApplicationShell();		
+	private static void initializeApplicationShell() {
+		mainShell = new ApplicationShell();		
 		
+		configureApplicationShell();
+	}
+	
+	private static void configureApplicationShell() {
+		mainShell.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		initializeApplicationShell();
 	}
 
 }
