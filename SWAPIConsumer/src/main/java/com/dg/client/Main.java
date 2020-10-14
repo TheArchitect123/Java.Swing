@@ -2,7 +2,9 @@ package com.dg.client;
 
 import javax.swing.JFrame;
 
+//Custom Packages
 import com.dg.client.components.frames.ApplicationShell;
+import com.dg.utilities.constants.AppInformation;
 
 public class Main {
 	
@@ -15,7 +17,10 @@ public class Main {
 	}
 	
 	private static void configureApplicationShell() {
-		mainShell.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		mainShell.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); //Set the closing operation that happens when this frame is closed
+		mainShell.setSize(500, 500);
+		mainShell.setTitle(AppInformation.appname);
+		mainShell.
 	}
 	
 	public static void main(String[] args) {
