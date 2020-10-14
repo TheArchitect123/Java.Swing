@@ -17,6 +17,7 @@ public class ApplicationShell extends JFrame {
 
 	public void initializeViewModels() {
 
+		//Register all the view models related to the business logic
 	}
 
 	public void initializeServices() {
