@@ -10,7 +10,8 @@ public interface CommonDatabaseService {
     public void commit();
     public void createTable<T>();
 
-    //Remove Items
+    @SuppressWarnings
+    @Override 
     public void delete(object objectToDelete);
     public void delete<T>(String id); 
     public void delete<T>(IEnumerable<Guid> ids);
