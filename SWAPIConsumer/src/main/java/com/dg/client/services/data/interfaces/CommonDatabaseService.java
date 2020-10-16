@@ -13,7 +13,7 @@ public interface CommonDatabaseService {
     @SuppressWarnings
     @Override 
     public void delete(object objectToDelete);
-    public void delete<T>(String id); 
+    public <T> void delete(String id); 
     public void delete<T>(IEnumerable<Guid> ids);
     public void deleteAll<T>();
 

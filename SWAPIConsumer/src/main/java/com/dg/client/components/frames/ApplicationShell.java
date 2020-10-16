@@ -5,7 +5,7 @@ import eu.lestard.easydi.EasyDI;
 
 public class ApplicationShell extends JFrame {
 	private EasyDI _mainiOCContainer;
-
+	
 	public ApplicationShell(){
 		if(_mainiOCContainer == null) //initialize the iOC Container if it does not yet exist
 			_mainiOCContainer = new EasyDI();
