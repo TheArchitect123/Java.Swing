@@ -1,36 +1,34 @@
 package com.dg.client.components.frames;
 
 import javax.swing.JFrame;
+import com.dg.client.view_models.LoginViewModel;
+
 import eu.lestard.easydi.EasyDI;
 
 public class ApplicationShell extends JFrame {
-	private EasyDI _mainiOCContainer;
+	private EasyDI mainiOCContainer;
 	
 	public ApplicationShell(){
-		if(_mainiOCContainer == null) //initialize the iOC Container if it does not yet exist
-			_mainiOCContainer = new EasyDI();
+		if(mainiOCContainer == null) //initialize the iOC Container if it does not yet exist
+			mainiOCContainer = new EasyDI();
 
-		initializeViewModels();
-		initializeServices();
+		registerViewModels();
+		registerServices();
 		setUpDatabase();
 	}
 
-	public void initializeViewModels() {
+	public void registerViewModels() {
 
 		//Register all the view models related to the business logic
+		
+		mainiOCContainer.markAsSingleton(LoginViewModel.class);
 	}
 
-	public void initializeServices() {
+	public void registerServices() {
 
 	}
 
 	public void setUpDatabase() {
 
-	}
-	
-	
-	//Getters & Setters
-	public EasyDI getApplicationiOCContainer() {
-		return _mainiOCContainer;
 	}
 }
